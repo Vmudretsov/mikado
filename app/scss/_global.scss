@@ -1,0 +1,27 @@
+html,
+body{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  @extend %mazzard-400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: $text;
+  background-color: #fff;
+}
+
+.main{
+  flex-grow: 1;
+}
+
+a{
+  color: $text;
+}
+.container{
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

@@ -1,0 +1,61 @@
+@font-face{
+  font-family: 'Mazzard-Light';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Mazzard-Light'),
+  url('../fonts/Mazzard-Light.woff2') format('woff2'),
+  url('../fonts/Mazzard-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Mazzard-Regular'),
+    url('../fonts/Mazzard-Regular.woff2') format('woff2'),
+    url('../fonts/Mazzard-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard-Medium';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Mazzard-Medium'),
+    url('../fonts/Mazzard-Medium.woff2') format('woff2'),
+    url('../fonts/Mazzard-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard-SemiBold';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Mazzard-SemiBold'),
+    url('../fonts/Mazzard-SemiBold.woff2') format('woff2'),
+    url('../fonts/Mazzard-SemiBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Mazzard-Bold'),
+    url('../fonts/Mazzard-Bold.woff2') format('woff2'),
+    url('../fonts/Mazzard-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Roboto-Medium';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Roboto-Medium'),
+  url('../fonts/Roboto-Medium.woff2') format('woff2'),
+  url('../fonts/Roboto-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+
