@@ -25,3 +25,236 @@ a{
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.btn{
+  display: inline-block;
+  @extend %mazzard-700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $title;
+  max-width: 300px;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  position: relative;
+  transform: translateZ(0);
+  transition: color 500ms ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: $title;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  transform: scaleY(0);
+  transition: transform 500ms ease;
+}
+
+.btn:hover::before{
+  transform: scaleY(1);
+}
+
+.link{
+  display: inline-block;
+  transition: color 500ms ease;
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+}
+
+.link::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: $title;
+  transition-duration: 500ms;
+}
+
+.link:hover::before{
+  width: 100%;
+  left: 0;
+}
+
+.title{
+  margin-bottom: 35px;
+}
+
+.title h2{
+  @extend %mazzard-600;
+  font-size: 70px;
+  color: $title;
+  text-transform: uppercase;
+}
+
+.overlay {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 130;
+  background-color: rgba(22, 33, 55, 0.5);
+  backdrop-filter: blur(16px);
+}
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 230;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.pop-up.openned {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pop-up .overlay {
+  background: rgba(22, 33, 55, .5);
+  backdrop-filter: blur(0px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.pop-up .close {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.pop-up .close svg {
+  transition: transform 500ms ease;
+}
+
+.pop-up .close svg:hover {
+  transform: scale(1.25);
+}
+
+.pop-up.pop-up_form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 690px;
+  width: 100%;
+  padding: 50px 125px 60px;
+  margin: 30px 0;
+  background-color: #fff;
+  opacity: 1;
+  transition: all 500ms ease;
+  position: relative;
+}
+
+.close svg rect {
+  fill: $title;
+}
+
+.modal{
+  &__form-box {
+    text-align: center;
+    padding: 40px 0;
+  }
+  &__form-title{
+    @extend %mazzard-600;
+    font-size: 28px;
+    color: $title;
+  }
+  &__input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  &__input{
+    border: 1px solid transparent;
+    border-bottom: 1px solid $title;
+    padding: 20px;
+    transition: border-left-color 500ms ease,
+    border-color 500ms ease;
+    outline: transparent;
+    // margin-top: -1px;
+  }
+  &__input:hover:first-child{
+    border-top: 1px solid $title;
+  }
+  &__input:hover{
+    border-left: 1px solid $title;
+    border-right: 1px solid $title;
+  }
+  &__input::placeholder{
+    transition: padding-left 500ms ease;
+  }
+  &__input:hover::placeholder{
+    padding-left: 10px;
+  }
+  &__input,
+  &__input::placeholder{
+    @extend %mazzard-400;
+    font-size: 18px;
+    color: $text;
+  }
+  &__form-btn{
+    margin: 0 auto 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__radio-box{
+    position: relative;
+  }
+  &__radio{
+    cursor: pointer;
+  }
+  &__radio-input {
+    @extend %radio-hidden;
+  }
+  &__radio-input:checked + .modal__checkbox::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;
+    height: 14px;
+    left: 2px;
+    top: 1px;
+  }
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $title;
+    position: absolute;
+    left: 0;
+    top: 4px;
+  }
+  &__radio-text{
+    display: block;
+    @extend %mazzard-400;
+    font-size: 16px;
+    color: $text;
+    padding-left: 38px;
+  }
+}

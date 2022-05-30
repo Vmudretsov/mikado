@@ -11,11 +11,371 @@
 
 <body>
 
-  
+  <div class="pop-up pop-up_form">
+    <div class="overlay">
+      <form id="static_form_pop-up">
+        <div class="modal__form-box">
+          <span class="modal__form-title">
+            Связаться с нами
+          </span>
+          <span class="close">
+            <svg width="27" height="27" viewBox="0 0 29 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1.36133" width="37" height="2" transform="rotate(42.9108 1.36133 0)" fill="white" />
+              <rect width="37" height="2" transform="matrix(-0.732415 0.680858 0.680858 0.732415 27.0996 0)"
+                fill="white" />
+            </svg>
+          </span>
+        </div>
+        <div class="modal__input-box">
+          <input class="modal__input" name="name_static_form" type="text" placeholder="Имя" required>
+          <input class="modal__input" name="tel_static_form" type="tel" placeholder="Телефон" required>
+          <input class="modal__input" name="mail_static_form" type="email" placeholder="E-mail" required>
+        </div>
+        <button class="modal__form-btn btn" type="submit">отправить</button>
+        <div class="modal__radio-box">
+          <label class="modal__radio">
+            <input class="modal__radio-input" type="checkbox">
+            <span class="modal__checkbox"></span>
+          </label>
+          <span class="modal__radio-text">
+            Нажимая на кнопку «Отправить», вы даете согласие<br>
+            на обработку своих персональных данных
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <header class="header">
+
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <a class="header__logo" href="#">
+            <img src="images/icons/logo.svg" alt="logo icon">
+          </a>
+          <div class="header__top-box">
+            <a class="header__top-btn btn" href="#">
+              вход на портал
+            </a>
+            <a class="header__top-btn btn js-open-pop-up_form" href="#">
+              + стать клиентом
+            </a>
+          </div>
+          <div class="header__menu-btn">
+            <svg width="29" height="21" viewBox="0 0 29 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M29 3L29 0L0 -1.09278e-06L-1.52116e-07 3L29 3Z" fill="#002B46" />
+              <path d="M29 12L29 9L0 9L-1.52116e-07 12L29 12Z" fill="#002B46" />
+              <path d="M29 21L29 18L0 18L-1.52116e-07 21L29 21Z" fill="#002B46" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__menu">
+      <div class="container">
+        <div class="header__menu-inner">
+          <div class="header__top-box header__top-box--adaptive">
+            <a class="header__top-btn btn" href="#">
+              вход на портал
+            </a>
+            <button class="header__top-btn btn js-open-pop-up_form" href="#">
+              + стать клиентом
+            </button>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="#">
+                  о компании
+                </a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">
+                  клиентам
+                </a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">
+                  сервисы
+                </a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">
+                  программы лояльности
+                </a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">
+                  контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__lang">
+            <div class="header__lang-box">
+              <a class="header__lang-link header__lang-link--active" href="#">
+                ru
+              </a>
+              <a class="header__lang-link" href="#">
+                en
+              </a>
+            </div>
+            <div class="header__close">
+              <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.8543 26.9757L26.9756 24.8544L2.12121 -2.31139e-06L-0.000107641 2.12132L24.8543 26.9757Z"
+                  fill="white" />
+                <path d="M2.12132 26.9757L0 24.8544L24.8544 -2.31139e-06L26.9757 2.12132L2.12132 26.9757Z"
+                  fill="white" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <section class="contacts">
+
+      <div class="contacts__wrapper">
+        <div class="container">
+          <div class="contact__title title">
+            <h2>контакты</h2>
+          </div>
+          <div class="contacts__inner">
+
+            <div class="contacts__content">
+              <div class="contacts__content-city">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="34" height="34" fill="white" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.9996 4.25001C11.9264 4.25001 7.64961 8.72253 7.64961 14.45C7.64961 17.3099 8.88171 20.2404 10.5793 22.897C12.2664 25.5373 14.3375 27.7896 15.8435 29.2664C16.501 29.9111 17.4983 29.9111 18.1557 29.2664C19.6617 27.7896 21.7328 25.5373 23.42 22.897C25.1175 20.2404 26.3496 17.3099 26.3496 14.45C26.3496 8.72253 22.0728 4.25001 16.9996 4.25001ZM5.09961 14.45C5.09961 7.50256 10.3368 1.70001 16.9996 1.70001C23.6624 1.70001 28.8996 7.50256 28.8996 14.45C28.8996 18.0048 27.3874 21.4239 25.5687 24.27C23.7396 27.1325 21.5227 29.5362 19.9411 31.0871C18.292 32.7042 15.7072 32.7042 14.0581 31.0871C12.4765 29.5362 10.2596 27.1325 8.43048 24.27C6.61183 21.4239 5.09961 18.0048 5.09961 14.45ZM16.9996 11.0572C15.5913 11.0572 14.4496 12.1989 14.4496 13.6072C14.4496 15.0156 15.5913 16.1572 16.9996 16.1572C18.4079 16.1572 19.5496 15.0156 19.5496 13.6072C19.5496 12.1989 18.4079 11.0572 16.9996 11.0572ZM11.8996 13.6072C11.8996 10.7906 14.183 8.50722 16.9996 8.50722C19.8163 8.50722 22.0996 10.7906 22.0996 13.6072C22.0996 16.4239 19.8163 18.7072 16.9996 18.7072C14.183 18.7072 11.8996 16.4239 11.8996 13.6072Z"
+                    fill="#32A5EB" />
+                </svg>
+                <h4>Санкт-Петербург</h4>
+              </div>
+
+              <div class="contacts__items">
+                <div class="contacts__item-box">
+                  <div class="contacts__item">
+                    <span>Телефон</span>
+                    <a href="tel:78125467800">
+                      +7 (812) 546-78-00
+                    </a>
+                  </div>
+                  <div class="contacts__item">
+                    <span>E-mail</span>
+                    <a href="mailto:mikado@info.ru">
+                      mikado@info.ru
+                    </a>
+                  </div>
+                </div>
+
+                <div class="contacts__item contacts__item-address">
+                  <span>Адрес</span>
+                  <p>
+                    г. Санкт-Петербург, ул. Владимирская, 43/12, оф. 265.
+                    <span>с 10:00 до 18:00 по будням.</span>
+                  </p>
+                </div>
+              </div>
+
+              <button class="contacts__btn btn js-open-pop-up_form" href="#">
+                оставить заявку
+              </button>
+            </div>
+
+            <div class="contacts__cities">
+              <ul class="contacts__list">
+                <li class="contacts__list-item contacts__list-item--more                "><span>москва</span>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        краснодар
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        вологда
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="contacts__list-item contacts__list-item--more                "><span>краснодар</span>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        уфа
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="contacts__list-item contacts__list-item--more                "><span>вологда</span>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        уфа
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="contacts__list-item contacts__list-item--more                "><span>самара</span>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        уфа
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="contacts__list-item contacts__list-item--more                "><span>белгород</span>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        уфа
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="contacts__list-item">
+                  <a href="#">
+                    <span>петрозаводск</span>
+                  </a>
+                </li>
+                <li class="contacts__list-item">
+                  <a href="#">
+                    <span>мурманск</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- <button class="contacts__btn btn js-open-pop-up_form" href="#">
+                оставить заявку
+              </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map" id="map"></div>
+
+    </section>
 
 
+  </main>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <a class="footer__logo" href="#">
+            <img src="images/icons/logo-footer.svg" alt="footer-logo icon">
+          </a>
+          <button class="footer__btn btn js-open-pop-up_form" href="#">
+            + стать клиентом
+          </button>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link link" href="#">
+                  О компании
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link link" href="#">
+                  Клиентам
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link link" href="#">
+                  Сервисы
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link link" href="#">
+                  Программы лояльности
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link link" href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
+        <div class="footer__bottom">
+          <div class="footer__copy">
+            <p>
+              © 1994-2022, Компания Микадо. Все права защищены
+            </p>
+          </div>
+          <a class="footer__versality" href="https://www.versality.ru/" target="_blank">
+            <img src="images/icons/versality.svg" alt="versality icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3_b3EhD0YXwMp0q8DObsfavvJTbJ4M7I&callback=initMap&v=weekly"
+    async></script>
+
+  <script>
+
+    let map;
+
+    function initMap() {
+
+      var coordinates = { lat: 59.99934089172377, lng: 29.765613441069547 },
+
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: coordinates,
+          zoom: 16,
+          zoomControl: false,
+          // scaleControl: false,
+          streetViewControl: false,
+          mapTypeControl: false,
+          fullscreenControl: false,
+          styles: [
+            {
+              "featureType": "all",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "invert_lightness": true
+                },
+                {
+                  "saturation": 10
+                },
+                {
+                  "lightness": 30
+                },
+                {
+                  "gamma": 0.5
+                },
+                {
+                  "hue": "#435158"
+                }
+              ]
+            }
+          ],
+        }),
+
+        image = 'images/icons/map-icon.svg',
+        marker = new google.maps.Marker({
+          position: { lat: 59.99934089172377, lng: 29.765613441069547 },
+          map: map,
+          icon: image,
+        });
+
+    }
+  </script>
 
   <script src="js/main.min.js"> </script>
 </body>
