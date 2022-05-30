@@ -5,8 +5,333 @@
 @import 'global';
 
 
+.header{
+  &__top{
+    padding: 20px 0;
+  }
+  &__top-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top-btn{
+    width: 300px;
+    transition: background-color 500ms ease, color 500ms ease;
+  }
+  &__top-btn + .header__top-btn{
+    margin-left: 20px;
+  }
+  &__top-btn:first-child{
+    background-color: #fff;
+    color: $title;
+    border: 2px solid $title;
+  }
+  &__top-btn:first-child:hover{
+    background-color: $title;
+    color: #fff;
+  }
+  &__top-btn:first-child::before{
+    background-color: $title;
+  }
+  &__menu{
+    background-color: $text;
+    padding: 15px 0;
+  }
+  &__menu-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list{
+    display: flex;
+  }
+  &__item{
+    @extend %roboto-500;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  &__item a{
+    display: inline-block;
+    padding: 0 8px;
+    transition: color 500ms ease;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+  }
+  &__item a:hover{
+    color: $title;
+  }
+  &__item a::before{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: $title;
+    transition-duration: 500ms;
+  }
+  &__item a:hover::before{
+    width: 100%;
+    left: 0; 
+  }
+  &__item:not(:last-child){
+    margin-right: 40px;
+  }
+  &__link{
+    color: #fff;
+  }
+  &__lang-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+  }
+  &__lang-link{
+    @extend %roboto-500;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 1px;
+    transition: color 500ms ease;
+  }
+  &__lang-link:hover{
+    color: $title;
+  }
+  &__lang-link::before,
+  &__lang-link--active::before{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $title;
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+  &__lang-link:hover::before{
+    opacity: 1;
+  }
+  &__lang-link--active{
+    color: $title;
+    position: relative;
+    padding: 0 1px;
+  }
+  &__lang-link--active::before{
+    opacity: 1;
+  }
+  &__menu-btn,
+  &__close,
+  &__top-box--adaptive{
+    display: none;
+  }
+}
 
+.footer{
+  padding: 45px 0 40px;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+  &__nav{
+    border-bottom: 3px solid $title;
+    padding-bottom: 10px;
+  }
+  &__list{
+    display: flex;
+  }
+  &__item{
+    @extend %mazzard-500;
+    color: $text;
+    font-size: 16px;
+  }
+  &__item:not(:last-child){
+    margin-right: 30px;
+  }
+  &__item a{
+    position: relative;
+    transition: color 500ms ease;
+  }
+  &__item a:hover{
+    color: $title;
+  }
+  &__item a::before{
+    bottom: -13px;
+    background-color: $text;
+  }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__copy p{
+    @extend %mazzard-500;
+    font-size: 14px;
+    color: $text;
+  }
+  &__btn{
+    cursor: pointer;
+  }
+}
 
+.contacts{
+  &__wrapper{
+    padding: 80px 0;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__content-city{
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &__content-city h4{
+    @extend %mazzard-600;
+    font-size: 28px;
+    color: $title;
+    margin-left: 15px;
+    // padding-bottom: 5px;
+    border-bottom: 2px solid $title;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  &__item-box{
+    margin-right: 100px;
+  }
+  &__item{
+    display: flex;
+    align-items: center; 
+  }
+  &__item:nth-child(1){
+    margin-bottom: 55px;
+  }
+  &__item-address{
+    align-items: flex-start;
+  }
+  &__item-address span{
+    padding-top: 5px;
+  }
+  &__item span,
+  &__item a,
+  &__item p{
+    @extend %mazzard-400;
+  }
+  &__item span{
+    display: block;
+    width: 80px;
+    font-size: 18px;
+    color: $title;
+  }
+  &__item a{
+    font-size: 26px;
+    color: $text;
+    display: inline-block;
+    transition: color 500ms ease;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+  }
+  &__item a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: $text;
+    transition-duration: 500ms;
+  }
+  &__item a:hover::before{
+    width: 100%;
+    left: 0;
+  }
+  &__item p{
+    font-size: 18px;
+    color: $text;
+    line-height: 2;
+    max-width: 260px;
+  }
+  &__item p span{
+    padding-top: 25px;
+    width: 100%;
+    color: $text;
+  }
+  &__cities{
+    padding-right: 80px;
+  }
+  &__cities ul li{
+    @extend %mazzard-400;
+    font-size: 18px;
+    color: $text;
+    text-transform: capitalize;
+  }
+  &__cities ul li a{
+    color: inherit;
+  }
+  &__cities ul li span{
+    display: block;
+    transition: color 500ms ease;
+  }
+  &__cities ul li span:hover{
+    color: $title;
+  }
+  &__cities ul li:not(:last-child){
+    margin-bottom: 15px;
+  }
+  &__list-item--more{
+    position: relative;
+    padding-right: 15px;
+    cursor: pointer;
+  }
+  &__list-item--more::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 12px;
+    background-image: url('../images/icons/arrow-down.svg');
+    width: 8px;
+    height: 6px;
+    transition: transform 500ms ease;
+  }
+  .active::before{
+    transform: rotate(180deg);
+  }
+  
+  &__cities ul li ul{
+    list-style: none;
+    padding-top: 5px;
+    padding-left: 0px;
+  }
+  &__cities ul li ul li{
+    transition: color 500ms ease;
+  }
+  &__cities ul li ul li:hover{
+    color: $title;
+  }
+  &__cities ul li ul li a{
+    color: inherit;
+  }
+}
+
+#map{
+  max-width: 100%;
+  width: 100%;
+  height: 400px;
+}
 
 
 
